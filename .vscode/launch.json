@@ -1,0 +1,29 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug: 1st-minimal",
+            "cwd": "${workspaceFolder}/1st-minimal",
+            "executable": "${workspaceFolder}/1st-minimal/build/firmware.elf",
+            "request": "launch",
+            "type": "cortex-debug",
+            "runToEntryPoint": "main",
+            "servertype": "openocd",
+            "device": "STM32F446RE",
+            "configFiles": ["interface/stlink-v2-1.cfg", "target/stm32f4x.cfg"],
+            "preLaunchTask": "build:1st-minimal"
+        },
+        {
+            "name": "Debug: 2nd-led-blink",
+            "cwd": "${workspaceFolder}/2nd-led-blink",
+            "executable": "${workspaceFolder}/2nd-led-blink/build/firmware.elf",
+            "request": "launch",
+            "type": "cortex-debug",
+            "runToEntryPoint": "main",
+            "servertype": "openocd",
+            "device": "STM32F446RE",
+            "configFiles": ["interface/stlink-v2-1.cfg", "target/stm32f4x.cfg"],
+            "preLaunchTask": "build:2nd-led-blink"
+        }
+    ]
+}
