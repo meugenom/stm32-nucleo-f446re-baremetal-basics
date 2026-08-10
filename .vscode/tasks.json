@@ -1,0 +1,46 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "build:1st-minimal",
+			"type": "shell",
+			"command": "make",
+			"args": ["all"],
+			"options": {
+                "cwd": "${workspaceFolder}/1st-minimal"
+            },
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": "$gcc"
+		},
+		{
+			"label": "build:2nd-led-blink",
+			"type": "shell",
+			"command": "make",
+			"args": ["all"],
+			"options": {
+                "cwd": "${workspaceFolder}/2nd-led-blink"
+            },
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": "$gcc"
+		},
+		{
+			"label": "flash",
+			"type": "shell",
+			"command": "make",
+			"args": ["flash"],
+			"dependsOn": ["build"]			
+		},
+		{
+			"label": "clean",
+			"type": "shell",
+			"command": "make",
+			"args": ["clean"]
+		}
+	]
+}
