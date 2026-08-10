@@ -1,0 +1,12 @@
+# Build artifacts
+*/build/
+*.elf
+*.bin
+*.map
+*.o
+
+# macOS system files
+.DS_Store
+
+# VS Code history / local caches
+.vscode/*.log
