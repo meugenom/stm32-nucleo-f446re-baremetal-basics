@@ -1,6 +1,6 @@
 /**
  * Minimal Bare-Metal STM32 Application
- * Demonstrates basic step counting (1, 2, 3...) and cumulative sum accumulation
+ * Demonstrates basic step counting (1, 2, 3...) and sum accumulation
  * (1, 3, 6, 10, 15...) suitable for GDB / Watch Expressions during debugging.
  */
 

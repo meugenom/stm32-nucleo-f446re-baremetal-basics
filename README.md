@@ -8,10 +8,10 @@ This educational repository contains examples of configuration and programs for 
   - [1. [HW] Connection STM32-Board](#1-hw-connection-stm32-board)
   - [2. [SW] Tools Installation](#2-sw-tools-installation)
   - [3. [SW] ST-LINK Configuration](#3-sw-st-link-configuration)
-  - [4. [SW] VS Code Environment](#4-sw-vs-code-environment)
+  - [4. [SW] VS Code Environment](#4-sw-vscode-environment)
     - [4.1 Required Extensions](#41-required-extensions)
     - [4.2 Clone the Repository](#42-clone-the-repository)
-    - [4.3 Build & Debug via VS Code](#43-build--debug-via-vs-code)
+    - [4.3 Build & Debug via VS Code](#43-build--debug-via-vscode)
 - [1st-minimal](#1st-minimal)
 - [2nd-led-blink](#2nd-led-blink)
 - [Directory Structure](#directory-structure)
@@ -120,12 +120,12 @@ In VS Code (`.vscode/launch.json`), the debugger utilizes the following settings
 ## 1st-minimal
 
 Code demonstrates basic step counting (1, 2, 3, ...) and cumulative sum for GDB/Watch Expressions during debugging.
-
 Run with `Debug: 1st-minimal` by selecting it from the debug configuration dropdown.
 
 ## 2nd-led-blink
 
 Code demonstrates GPIO configuration and toggling of the onboard LED (LD2) on the Nucleo board.
+Run with `Debug: 2nd-led-blink` by selecting it from the debug configuration dropdown.
 
 ## Directory Structure
 
