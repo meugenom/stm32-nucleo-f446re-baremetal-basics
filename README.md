@@ -42,6 +42,7 @@ To compile bare-metal C code and communicate with the board, install the ARM GCC
 ```bash
     sudo apt update
     sudo apt install gcc-arm-none-eabi build-essential openocd stlink-tools
+    sudo ln -s /usr/bin/gdb-multiarch /usr/bin/arm-none-eabi-gdb
 ```
 
 **Toolchain Verification**
@@ -80,7 +81,7 @@ In VS Code (`.vscode/launch.json`), the debugger utilizes the following settings
     ]
 ```
 
-- `"device": "STM32F446RE"`: Informs the `Cortex-Debug` extension of the specific MCU model for register mapping and SVD file selection.
+- `"device": "STM32F446RE"`: Informs the `Cortex-Debug` Visual Studio Code extension of the specific MCU model for register mapping and SVD file selection.
 - `"interface/stlink-v2-1.cfg"`: Selects the hardware interface config for the onboard **ST-LINK V2.1** programmer present on Nucleo boards.
 - `"target/stm32f4x.cfg"`: Specifies the **STM32F4** target architecture config file for OpenOCD to handle flash algorithms and hardware reset routines.
 
