@@ -35,16 +35,19 @@ To compile bare-metal C code and communicate with the board, install the ARM GCC
 
 **macOS (via Homebrew)**
 
-```bash
+```bash    
     brew install --cask gcc-arm-embedded
     brew install make openocd stlink
+    
+    # Verify installation
+    arm-none-eabi-gdb --version
 ```
 
 **Linux (Ubuntu/Debian)**
 
 ```bash
     sudo apt update
-    sudo apt install gcc-arm-none-eabi build-essential openocd stlink-tools
+    sudo apt install gcc-arm-none-eabi build-essential openocd stlink-tools gdb-multiarch
     sudo ln -s /usr/bin/gdb-multiarch /usr/bin/arm-none-eabi-gdb
 ```
 
