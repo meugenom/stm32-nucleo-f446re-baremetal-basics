@@ -5,10 +5,10 @@ This educational repository contains examples of configuration and programs for 
 ## Table of Contents
 
 - [Quick Start & Building](#quick-start--building)
-  - [1. Hardware Setup](#1-hardware-setup)
-  - [2. Prerequisites & Toolchain Installation](#2-prerequisites--toolchain-installation)
-  - [3. Board Verification & ST-LINK Configuration](#3-board-verification--st-link-configuration)
-  - [4. VS Code Environment Setup](#4-vs-code-environment-setup)
+  - [1. [HW] Connection STM32-Board](#1-hw-connection-stm32-board)
+  - [2. [SW] Tools Installation](#2-sw-tools-installation)
+  - [3. [SW] ST-LINK Configuration](#3-sw-st-link-configuration)
+  - [4. [SW] VS Code Environment](#4-sw-vs-code-environment)
     - [4.1 Required Extensions](#41-required-extensions)
     - [4.2 Clone the Repository](#42-clone-the-repository)
     - [4.3 Build & Debug via VS Code](#43-build--debug-via-vs-code)
@@ -21,13 +21,16 @@ This educational repository contains examples of configuration and programs for 
 
 ## Quick Start & Building
 
-### 1. Hardware Setup
+### 1. [HW] Connection STM32-Board
 
 - Board: STM32 NUCLEO-F446RE.
 - Connection: Connect the board to your computer using a USB Mini-B cable connected to the onboard ST-LINK port (CN1, top of the board).
 - Power Verification: Confirm that the green power LED (PWR / LD3) is turned on solid.
 
-### 2. Prerequisites & Toolchain Installation
+---
+
+### 2. [SW] Tools Installation
+
 To compile bare-metal C code and communicate with the board, install the ARM GCC cross-compiler, make, and openocd.
 
 **macOS (via Homebrew)**
@@ -45,8 +48,8 @@ To compile bare-metal C code and communicate with the board, install the ARM GCC
     sudo ln -s /usr/bin/gdb-multiarch /usr/bin/arm-none-eabi-gdb
 ```
 
-**Toolchain Verification**
-    
+**Tools Verification**
+
 ```bash
     arm-none-eabi-gcc --version
     make --version
@@ -54,7 +57,9 @@ To compile bare-metal C code and communicate with the board, install the ARM GCC
     st-info --version
 ```
 
-### 3. Board Verification & ST-LINK Configuration
+---
+
+### 3. [SW] ST-LINK Configuration
 Before debugging, verify that your machine detects the onboard ST-LINK programmer and can communicate with the STM32 chip.
 
 ```bash
@@ -87,11 +92,13 @@ In VS Code (`.vscode/launch.json`), the debugger utilizes the following settings
 
 > Expected output: OpenOCD should recognize the MCU and report [stm32f4x.cpu] Hardware has `6 breakpoints`, `4 watchpoints`. Press `Ctrl + C` to exit.
 
-### 4. VS Code Environment Setup
+---
+
+### 4. [SW] VSCode Environment
 
 #### 4.1 Required Extensions
 
-    - Cortex-Debug (`marus25.cortex-debug`) — ARM Cortex-M hardware debugging support.
+    - Cortex-Debug (`marus25.cortex-debug`) — ARM Cortex-M hardware debugging support.    
     - C/C++ (`ms-vscode.cpptools`) — IntelliSense and syntax highlighting.
 
 #### 4.2 Clone the Repository
@@ -101,7 +108,7 @@ In VS Code (`.vscode/launch.json`), the debugger utilizes the following settings
     cd stm32-nucleo-f446re-baremetal-basics
 ```
 
-#### 4.3 Build & Debug via VS Code
+#### 4.3 Build & Debug via VSCode
 
 - Open the workspace root folder in VS Code.
 - Open the debug panel and select the desired configuration (e.g., `Debug: 1st-minimal`).
@@ -147,6 +154,7 @@ stm32f446-baremetal-basics/
         └── src/
             └── main.c
 ```
+
 # References
 
 
